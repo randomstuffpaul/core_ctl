@@ -111,7 +111,7 @@ static ssize_t store_min_cpus(struct cpu_data *state,
 
 static ssize_t show_min_cpus(struct cpu_data *state, char *buf)
 {
-	return snprintf(buf, PAGE_SIZE, "%u\n", state->min_cpus);
+	return snprintf(buf, PAGE_SIZE, "%x\n", state->min_cpus);
 }
 
 static ssize_t store_max_cpus(struct cpu_data *state,
@@ -132,7 +132,7 @@ static ssize_t store_max_cpus(struct cpu_data *state,
 
 static ssize_t show_max_cpus(struct cpu_data *state, char *buf)
 {
-	return snprintf(buf, PAGE_SIZE, "%u\n", state->max_cpus);
+	return snprintf(buf, PAGE_SIZE, "%x\n", state->max_cpus);
 }
 
 static ssize_t store_offline_delay_ms(struct cpu_data *state,
